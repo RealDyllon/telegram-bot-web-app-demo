@@ -14,14 +14,17 @@ declare global {
 function App() {
   useEffect(() => {
     console.log(window.Telegram.WebApp);
-    window.Telegram.WebApp.ready()
+    window.Telegram.WebApp.ready();
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Telegram Bot Web App</p>
+        <p>
+          Hi {window.Telegram.WebApp?.initDataUnsafe?.user?.first_name}, welcome
+          to BurgerKhong
+        </p>
+        <p>May I take your order?</p>
       </header>
     </div>
   );
